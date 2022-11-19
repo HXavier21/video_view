@@ -1,0 +1,14 @@
+prefix=/home/xavier/Desktop/output_aarch64
+exec_prefix=${prefix}
+libdir=/home/xavier/Desktop/output_aarch64/lib
+includedir=/home/xavier/Desktop/output_aarch64/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 8.49.101
+Requires: 
+Requires.private: libswscale >= 6.8.112, libpostproc >= 56.7.100, libavformat >= 59.34.101, libavcodec >= 59.51.101, libswresample >= 4.9.100, libavutil >= 57.41.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

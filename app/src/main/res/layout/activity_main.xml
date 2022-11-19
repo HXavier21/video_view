@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerview"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <Button
+        android:id="@+id/choose"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/playerview"
+        android:text="Choose"
+        tools:ignore="VisualLintButtonSize" />
+
+    <EditText
+        android:id="@+id/start_time"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/choose"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="to"
+        app:layout_constraintEnd_toStartOf="@id/end_time"
+        app:layout_constraintStart_toEndOf="@id/start_time"
+        app:layout_constraintTop_toBottomOf="@id/choose" />
+
+    <EditText
+        android:id="@+id/end_time"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/choose"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/clip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/end_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Clip"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

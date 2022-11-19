@@ -1,0 +1,14 @@
+prefix=/home/xavier/Desktop/output_aarch64
+exec_prefix=${prefix}
+libdir=/home/xavier/Desktop/output_aarch64/lib
+includedir=/home/xavier/Desktop/output_aarch64/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 59.34.101
+Requires: 
+Requires.private: libavcodec >= 59.51.101, libswresample >= 4.9.100, libavutil >= 57.41.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lm -latomic -lz
+Cflags: -I${includedir}

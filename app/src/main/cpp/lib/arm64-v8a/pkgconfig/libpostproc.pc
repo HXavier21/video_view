@@ -1,0 +1,14 @@
+prefix=/home/xavier/Desktop/output_aarch64
+exec_prefix=${prefix}
+libdir=/home/xavier/Desktop/output_aarch64/lib
+includedir=/home/xavier/Desktop/output_aarch64/include
+
+Name: libpostproc
+Description: FFmpeg postprocessing library
+Version: 56.7.100
+Requires: 
+Requires.private: libavutil >= 57.41.100
+Conflicts:
+Libs: -L${libdir}  -lpostproc 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}
