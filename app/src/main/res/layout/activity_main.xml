@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.exoplayer2.ui.PlayerView
+    <com.google.android.exoplayer2.ui.StyledPlayerView
         android:id="@+id/playerview"
         android:layout_width="match_parent"
         android:layout_height="500dp"
@@ -27,6 +27,7 @@
         android:id="@+id/start_time"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
+        android:inputType="number"
         app:layout_constraintTop_toBottomOf="@id/choose"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -43,6 +44,7 @@
     <EditText
         android:id="@+id/end_time"
         android:layout_width="175dp"
+        android:inputType="number"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/choose"
         app:layout_constraintEnd_toEndOf="parent"

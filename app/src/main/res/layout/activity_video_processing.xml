@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".VideoProcessingActivity">
 
-    <com.google.android.exoplayer2.ui.PlayerView
+    <com.google.android.exoplayer2.ui.StyledPlayerView
         android:id="@+id/playerview"
         android:layout_width="match_parent"
         android:layout_height="400dp"
@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <com.google.android.exoplayer2.ui.PlayerView
+    <com.google.android.exoplayer2.ui.StyledPlayerView
         android:id="@+id/playerview2"
         android:layout_width="match_parent"
         android:layout_height="100dp"

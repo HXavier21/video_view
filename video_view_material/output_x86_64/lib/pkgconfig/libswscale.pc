@@ -1,0 +1,14 @@
+prefix=/home/xavier/Desktop/output_x86_64
+exec_prefix=${prefix}
+libdir=/home/xavier/Desktop/output_x86_64/lib
+includedir=/home/xavier/Desktop/output_x86_64/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 6.8.112
+Requires: 
+Requires.private: libavutil >= 57.41.100
+Conflicts:
+Libs: -L${libdir}  -lswscale 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}

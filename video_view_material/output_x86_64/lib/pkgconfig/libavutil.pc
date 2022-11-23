@@ -1,0 +1,14 @@
+prefix=/home/xavier/Desktop/output_x86_64
+exec_prefix=${prefix}
+libdir=/home/xavier/Desktop/output_x86_64/lib
+includedir=/home/xavier/Desktop/output_x86_64/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 57.41.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

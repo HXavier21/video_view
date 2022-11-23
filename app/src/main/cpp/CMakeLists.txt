@@ -77,6 +77,12 @@ add_library(avdevice
 
         IMPORTED)
 
+add_library(x264
+
+        SHARED
+
+        IMPORTED)
+
 add_library(ffmpeg
         SHARED
         fftools/cmdutils.c
@@ -91,6 +97,12 @@ add_library(ffmpeg
         fftools/sync_queue.c
         fftools/thread_queue.c
         fftools/objpool.c)
+
+set_target_properties(x264
+
+        PROPERTIES IMPORTED_LOCATION
+
+        ${CMAKE_SOURCE_DIR}/lib/${CMAKE_ANDROID_ARCH_ABI}/libx264.so)
 
 set_target_properties(avcodec
 
@@ -167,4 +179,5 @@ target_link_libraries(
         swresample
         swscale
         postproc
+        x264
         ${log-lib} )
